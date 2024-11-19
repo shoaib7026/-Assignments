@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+    <div class="container mt-5" style="padding: 400px;">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Select J. Products</label>
+                    <select class="form-control" name="" id="jp">
+                        <option>Select</option>
+                    </select>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" id="jimg" src="images/b2.webp" alt="">
+                    <div class="card-body">
+                        <h4 id="jtitle" class="card-title">Title</h4>
+                        <p id="jtext" class="card-text">Text</p>
+                    </div>
+                </div>
+            </div>
+            <!-- this is second card guccii  -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Select Gucci Products</label>
+                    <select class="form-control" name="" id="gp">
+                        <option>Select</option>
+                    </select>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" id="gimg" src="images/b1.webp" alt="">
+                    <div class="card-body">
+                        <h4 id="gtitle" class="card-title">Title</h4>
+                        <p id="gtext" class="card-text">Text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <script>
+$.ajax({
+    url: "product.json",
+    type: "GET",
+    success: function(data) {
+        // Log the data to check it's loaded correctly
+        console.log(data);
+
+        // Populate the J. Products dropdown
+        data.j.forEach(function(item) {
+            $("#jp").append(`
+                <option value="${item.id}">${item.name}</option>
+            `);
+        });
+
+        // Populate the Gucci Products dropdown
+        data.gucci.forEach(function(item) {
+            $("#gp").append(`
+                <option value="${item.id}">${item.name}</option>
+            `);
+        });
+
+        // When a J. Product is selected
+        $("#jp").change(function() {
+            let selectedJProductId = $(this).val(); // Get selected product's id
+            let selectedJProduct = data.j.find(item => item.id == selectedJProductId);
+
+            if (selectedJProduct) {
+                $("#jimg").attr("src", selectedJProduct.image); // Set image
+                $("#jimg").attr("alt", selectedJProduct.name); // Set image alt text
+                $("#jtitle").text(selectedJProduct.name); // Set title
+                $("#jtext").text("Price: " + selectedJProduct.price); // Set price
+            }
+        });
+
+        // When a Gucci Product is selected
+        $("#gp").change(function() {
+            let selectedGucciProductId = $(this).val(); // Get selected product's id
+            let selectedGucciProduct = data.gucci.find(item => item.id == selectedGucciProductId);
+
+            if (selectedGucciProduct) {
+                $("#gimg").attr("src", selectedGucciProduct.image); // Set image
+                $("#gimg").attr("alt", selectedGucciProduct.name); // Set image alt text
+                $("#gtitle").text(selectedGucciProduct.name); // Set title
+                $("#gtext").text("Price: " + selectedGucciProduct.price); // Set price
+            }
+        });
+    },
+    error: function(xhr, status, error) {
+        console.error("Error loading JSON:", error);
+    }
+});
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

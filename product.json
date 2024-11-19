@@ -1,0 +1,43 @@
+{
+    "j": [
+      {
+        "id": 1,
+        "name": "Foog",
+        "image": "images/b1.webp",
+        "price": "5000"
+      },
+      {
+        "id": 2,
+        "name": "Savour",
+        "image": "images/b2.webp",
+        "price": "4900"
+      },
+      {
+        "id": 3,
+        "name": "Dior",
+        "image": "images/b3.webp",
+        "price": "8900"
+      }
+    ],
+    "gucci": [
+      {
+        "id": 1,
+        "name": "Gucci Rush",
+        "image": "images/b3.webp",
+        "price": "6500"
+      },
+      {
+        "id": 2,
+        "name": "Gucci Bloom",
+        "image": "images/b4.webp",
+        "price": "6200"
+      },
+      {
+        "id": 3,
+        "name": "Flora Gorgeous Gardenia",
+        "image": "images/b2.webp",
+        "price": "100"
+      }
+    ]
+  }
+  

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #product-card-container{
+            width: 200px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h2>Bonanza</h2>
+    <select id="brand1" onchange="displayProduct('Bonanza', this.value)" >
+        <option value="0">Select From Here....</option>
+
+        <option value="1">Bonanza Satrangi Spirit Of Love Women</option>
+        <option value="2">Bonanza Satrangi Pink Petals Women Edp</option>
+        <option value="3">Bonanza Satrangi Signature Men Edp</option>
+        <option value="4">Bonanza Satrangi Zoya Women Edp 100Ml</option>
+
+
+    </select>
+    <!-- Product Card Container -->
+<div id="product-card-container" class="card-container"></div>
+
+
+    <script>
+        // Define the product data
+        const products = {
+            Bonanza: {
+                1: {
+                    name: "Bonanza Satrangi Spirit Of Love Women",
+                    description: "A floral and fruity fragrance that speaks to the hearts of women.",
+                    price: "$30",
+                    image: "images/b1.webp"  // Link to the image
+                },
+                2: {
+                    name: "Bonanza Satrangi Pink Petals Women Edp",
+                    description: "A sweet, delicate fragrance of blooming flowers.",
+                    price: "$35",
+                    image: "images/b2.webp"  // Link to the image
+                },
+                3: {
+                    name: "Bonanza Satrangi Signature Men Edp",
+                    description: "A strong, woody fragrance for the modern man.",
+                    price: "$40",
+                    image: "images/b3.webp"  // Link to the image
+                },
+                4: {
+                    name: "Bonanza Satrangi Zoya Women Edp 100Ml",
+                    description: "A refreshing, elegant fragrance with a blend of citrus and floral notes.",
+                    price: "$45",
+                    image: "images/b4.webp"  // Link to the image
+                }
+            }
+        };
+
+
+
+
+        // This function will handle the dropdown selection and display the corresponding product
+function displayProduct(brand, productId) {
+    // Get the product container to display the product details
+    let productCardContainer = document.getElementById('product-card-container');
+    
+    // Clear any previous product cards
+    productCardContainer.innerHTML = '';
+
+    // Get the product details from the products object
+    let product = products[brand][productId];  // Access the selected product based on brand and product ID
+
+    // Check if the product exists
+    if (product) {
+        // Create the HTML content for the product card
+        let productCard = `
+            <div class="card" style="width: 18rem; margin: 10px;">
+                <img class="card-img-top" src="${product.image}" alt="${product.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${product.name}</h5>
+                    <p class="card-text">${product.description}</p>
+                    <p class="card-text"><strong>Price:</strong> ${product.price}</p>
+                </div>
+            </div>
+        `;
+        
+        // Append the product card to the product container
+        productCardContainer.innerHTML = productCard;
+    }
+}
+
+    </script>
+    
+
+
+
+
+</body>
+</html>
