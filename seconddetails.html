@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second details page </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="row p-5" >
+        <div class="col-md-5">
+                <div class="card">
+                    <img id="detailimg" class="card-img-top" src="" alt="">
+
+                  </div>
+                </div>
+
+
+                <div class="col-md-5 " >
+                    <div class="card " style="padding: 10px; border: 1 px solid black;">
+                        <h4 id="name" class="card-title">Title</h4>
+                        <p id="desc" class="card-text">Text</p>
+                        <p id="price" class="card-text">Text</p>
+
+                        <p id="category" class="card-text">Text</p>
+                        <p id="rating" class="card-text">Text</p>
+
+
+                    </div>
+                </div>
+              
+    </div>
+  </div>
+   
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+  
+
+//   ye humne url ko target keya he is variable me 
+  let url = new URL (window.location.href);
+
+
+// or is line me us url se pid lei he product id 
+    let pid =    url.searchParams.get('pid');
+
+console.log(pid);
+
+
+// ab id leyeny ky bad json ki file se dobara data mangwaya he or us me hm sirf id ko target kreyngy 
+
+$.ajax({
+    url:"seconddynamic.json", 
+    type:"Get",
+    success : function(response){
+        console.log(response);
+        const product = response.find(item => item.id == pid);
+
+        document.querySelector(".card-img-top").src = product.image;
+
+        document.querySelector("#name").textContent = product.name;
+
+        document.querySelector("#desc").textContent = product.description;
+
+        document.querySelector("#price").textContent = product.price;
+
+        document.querySelector("#category").textContent = product.category;
+
+        document.querySelector("#rating").textContent =  product.rating;
+
+
+
+        
+
+    }
+
+})
+
+
+
+
+    </script>
+
+</body>
+
+</html>

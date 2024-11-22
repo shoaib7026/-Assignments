@@ -1,0 +1,25 @@
+{
+    "burgers":[
+        {
+            "id":1,
+            "name":"Cheeseburger",
+            "price":1299,
+            "image":"images/chesseburger.jpeg",
+            "details":"A delicious cheeseburger with fresh ingredients."
+        },
+        {
+            "id":2,
+            "name":"Fries",
+            "price":400,
+            "image":"images/fries.jpeg",
+            "details":"Crispy golden fries served with ketchup."
+        },
+        {
+            "id":3,
+            "name":"Pizza",
+            "price":2250,
+            "image":"images/pizza.jpeg",
+            "details":"Hot and cheesy pizza with your favorite toppings."
+        }
+    ]
+}

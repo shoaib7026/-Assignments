@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <!-- this is for left image  -->
+        <div class="col-md-6">
+            <div class="card">
+                <img id="product-image" class="card-img-top" src="" alt="">
+            </div>
+        </div>
+        <!-- this is for details  -->
+
+        <div class="col-md-6">
+            <div class="card p-5">
+                <div class="card-body">
+                    <h4 id="productname" class="card-title"></h4>
+                    <p id="productprice" class="card-text"></p>
+                    <p id="productdetails" class="card-text"></p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+       
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+    let url = new URL (window.location.href);
+    console.log(url);
+
+
+
+    let pid =    url.searchParams.get('pid');
+    let pname =  url.searchParams.get('pname');
+    let pprice = url.searchParams.get('pprice');
+    let pimage = url.searchParams.get('pimage');
+    let pdetails = url.searchParams.get('pdetails');
+
+
+    $('#product-image').attr("src",pimage);
+    $('#productname').text(pname);
+    $('#productprice').text(pprice)
+    $('#productdetails').text(pdetails);
+
+</script>
+        
+
+</body>
+</html>

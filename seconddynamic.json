@@ -1,0 +1,138 @@
+[
+    {
+      "id": 1,
+      "name": "Classic Burger",
+      "description": "A juicy beef patty with fresh lettuce, tomato, and cheese, served with a soft bun.",
+      "price": 8.99,
+      "image": "images/chesseburger.jpeg",
+      "category": "Burgers",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Cheese Pizza",
+      "description": "A traditional cheese pizza with a crispy crust and a rich tomato base.",
+      "price": 12.49,
+      "image": "images/pizza.jpeg",
+      "category": "Pizza",
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "name": "Chicken Wrap",
+      "description": "Grilled chicken, fresh veggies, and a creamy sauce wrapped in a soft tortilla.",
+      "price": 6.99,
+      "image": "images/chickenwrap.jpeg",
+      "category": "Wraps",
+      "rating": 4.2
+    },
+    {
+      "id": 4,
+      "name": "French Fries",
+      "description": "Golden crispy fries served with ketchup or your choice of dipping sauce.",
+      "price": 3.49,
+      "image": "images/fries.jpeg",
+      "category": "Sides",
+      "rating": 4.3
+    },
+    {
+      "id": 5,
+      "name": "Chocolate Shake",
+      "description": "A creamy chocolate milkshake topped with whipped cream.",
+      "price": 4.99,
+      "image": "images/choclateshake.jpeg",
+      "category": "Drinks",
+      "rating": 4.6
+    },
+    {
+      "id": 6,
+      "name": "Veggie Burger",
+      "description": "A plant-based patty with fresh lettuce, tomato, and vegan mayo.",
+      "price": 9.99,
+      "image": "images/veggieburger.jpeg",
+      "category": "Burgers",
+      "rating": 4.4
+    },
+    {
+      "id": 7,
+      "name": "Pepperoni Pizza",
+      "description": "A classic pizza topped with pepperoni and mozzarella cheese.",
+      "price": 13.99,
+      "image": "images/pepperonipizza.jpeg",
+      "category": "Pizza",
+      "rating": 4.8
+    },
+    {
+      "id": 8,
+      "name": "Grilled Cheese Sandwich",
+      "description": "Melted cheese between toasted slices of buttery bread.",
+      "price": 5.49,
+      "image": "images/grilled-cheese-sandwiches.jpeg",
+      "category": "Sandwiches",
+      "rating": 4.1
+    },
+    {
+      "id": 9,
+      "name": "Caesar Salad",
+      "description": "Fresh romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.",
+      "price": 7.99,
+      "image": "images/caesar-salad.jpeg",
+      "category": "Salads",
+      "rating": 4.2
+    },
+    {
+      "id": 10,
+      "name": "Fish Tacos",
+      "description": "Crispy fish fillets in soft tortillas with cabbage slaw and a tangy sauce.",
+      "price": 11.49,
+      "image": "images/fish-tacos.jpeg",
+      "category": "Tacos",
+      "rating": 4.3
+    },
+    {
+      "id": 11,
+      "name": "Hot Dog",
+      "description": "A classic hot dog with mustard, ketchup, and relish.",
+      "price": 4.99,
+      "image": "images/hot-dog.jpeg",
+      "category": "Snacks",
+      "rating": 4.0
+    },
+    {
+      "id": 12,
+      "name": "Vanilla Ice Cream",
+      "description": "A scoop of creamy vanilla ice cream.",
+      "price": 3.99,
+      "image": "images/vanilla-ice-cream.jpeg",
+      "category": "Desserts",
+      "rating": 4.7
+    },
+    {
+      "id": 13,
+      "name": "BBQ Chicken Pizza",
+      "description": "Pizza topped with BBQ chicken, onions, and mozzarella.",
+      "price": 14.49,
+      "image": "images/bbq-chicken-pizza.jpeg",
+      "category": "Pizza",
+      "rating": 4.6
+    },
+    {
+      "id": 14,
+      "name": "Mango Smoothie",
+      "description": "A refreshing mango smoothie with a hint of lime.",
+      "price": 5.99,
+      "image": "images/mango-smoothie.jpeg",
+      "category": "Drinks",
+      "rating": 4.5
+    },
+    {
+      "id": 15,
+      "name": "Chicken Nuggets",
+      "description": "Crispy and tender chicken nuggets served with dipping sauce.",
+      "price": 6.49,
+      "image": "images/chicken-nuggets.jpeg",
+      "category": "Snacks",
+      "rating": 4.4
+    }
+  ]
+  
