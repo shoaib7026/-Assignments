@@ -1,0 +1,117 @@
+{
+    "Shirts": [
+      {
+        "id": 1,
+        "name": "Puma T-Shirt",
+        "brand": "Puma",
+        "price": "$30",
+        "material": "Cotton",
+        "color": "Grey",
+        "image": "images/Puma T-Shirt.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Adidas Polo",
+        "brand": "Adidas",
+        "price": "$40",
+        "material": "Polyester",
+        "color": "Green",
+        "image": "images/Adidas Polo.jpeg"
+      },
+      {
+        "id": 3,
+        "name": "Levi's Classic Shirt",
+        "brand": "Levi's",
+        "price": "$50",
+        "material": "Denim",
+        "color": "Light Blue",
+        "image": "images/Levi's Classic Shirt.jpeg"
+      },
+      {
+        "id": 4,
+        "name": "H&M Casual Shirt",
+        "brand": "H&M",
+        "price": "$25",
+        "material": "Cotton",
+        "color": "Red",
+        "image": "images/H&M Casual Shirt.jpeg"
+      }
+    ],
+    "Shoes": [
+      {
+        "id": 1,
+        "name": "Nike Air Max",
+        "brand": "Nike",
+        "price": "$100",
+        "size": "10",
+        "color": "Red",
+        "image": "images/Nike Air Max.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Reebok Classic",
+        "brand": "Reebok",
+        "price": "$90",
+        "size": "9",
+        "color": "White",
+        "image": "images/Reebok Classic.jpeg"
+      },
+      {
+        "id": 3,
+        "name": "Puma Speed",
+        "brand": "Puma",
+        "price": "$110",
+        "size": "11",
+        "color": "Red",
+        "image": "images/Puma Speed.jpeg"
+      },
+      {
+        "id": 4,
+        "name": "Adidas UltraBoost",
+        "brand": "Adidas",
+        "price": "$120",
+        "size": "9.5",
+        "color": "Gray",
+        "image": "images/Adidas UltraBoost.jpeg"
+      }
+    ],
+    "Perfumes": [
+      {
+        "id": 1,
+        "name": "Gucci Bloom",
+        "brand": "Gucci",
+        "price": "$70",
+        "size": "50ml",
+        "scent": "Floral",
+        "image": "images/Gucci Bloom.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Chanel No. 5",
+        "brand": "Chanel",
+        "price": "$120",
+        "size": "50ml",
+        "scent": "Woody",
+        "image": "images/Chanel No. 5.jpeg"
+      },
+      {
+        "id": 3,
+        "name": "Dior Sauvage",
+        "brand": "Dior",
+        "price": "$95",
+        "size": "100ml",
+        "scent": "Citrus",
+        "image": "images/Dior Sauvage.jpeg"
+      },
+      {
+        "id": 4,
+        "name": "Tom Ford Black Orchid",
+        "brand": "Tom Ford",
+        "price": "$150",
+        "size": "50ml",
+        "scent": "Oriental",
+        "image": "images/Tom Ford Black Orchid.jpeg"
+      }
+    ]
+  }
+  

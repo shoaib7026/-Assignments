@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second details page </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       
+</head>
+
+<body>
+
+
+     <div class="container">
+        <div class="row " style="padding: 100px 400px; ">
+            <div class="card ">
+                  <select class="form-control" name="" id="product-category">
+                    <option style="text-align: center;">Select From Here  </option>
+                    <option value="Shirts">Shirts</option>
+                    <option value="Shoes">Shoes</option>
+                    <option value="Perfumes">Perfumes</option>
+                  </select>
+                </div>
+        </div>
+     </div>
+   
+
+     <!-- product yaha pr show hongy -->
+     <div class="container">
+        <div class="row" id="product-display">
+
+        </div>
+     </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+  
+$.ajax({
+    url:"brandbattles.json",
+    type:"Get",
+    success : function(response){
+        console.log(response);
+
+$("#product-category").change(function(){
+
+    var selectedcategory = $(this) .val();
+
+
+    $("#product-display").empty();
+
+    // mtlb is line 63 me hm  response se wo wo value ley rahy he jo selectedcategory me user ne select ki he  
+    var filter = response[selectedcategory];
+
+    // ab hmm lopp bana rahy he becausae ab value filter waly variable me aagi he 
+    filter.forEach(element => {
+         var cards = `
+              <div class="col-md-4">
+<div class="card mb-5">
+  <img class="card-img-top" id="img" src="${element.image}" alt="">
+  <div class="card-body">
+    <h4 class="card-title" id="name"><strong>Name:</strong>${element.name}</h4>
+    <p class="card-text" id="price"><strong>Price:</strong>${element.price}</p>
+    <p class="card-text" id="brand"><strong>Brand:</strong>${element.brand}</p>
+    <p class="card-text" id="size"><strong>Material:</strong>${element.material}</p>
+    <p class="card-text" id="secnt"><strong>Color:</strong>${element.color}</p>
+    <p class="card-text" id="secnt"><strong>Size:</strong>${element.size}</p>
+    <p class="card-text" id="secnt"><strong>Scent:</strong>${element.scent}</p>
+
+
+  </div>
+</div>
+</div>
+         
+         
+         
+         
+         `;
+
+$("#product-display").append(cards);
+
+
+    });
+
+});
+
+    }
+});
+
+
+
+    </script>
+
+</body>
+
+</html>
